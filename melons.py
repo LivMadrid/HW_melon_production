@@ -35,17 +35,18 @@ class Melon(object):
 # FIXME: Add Squash class definition here.
 class Squash(Melon):
     """Squash class with Melon Superclass"""
-    def prep_squash(self):
+    # I kept getting winter squash is yellow REJECTED so I 
+    # changed prep_squash to prep(self) because it has to be same as Melon class prep for it to pass through! 
+    #Yay! it works!
+    def prep(self):
         """Prep the squash by painting it green"""
         #add a method that handles prep(in superclass) this one handles the painting
         robots.cleanerbot.clean(self)
+        robots.painterbot.paint(self)
         robots.stickerbot.apply_logo(self)
-#add a conditional statement so that we can paint squash green 
-        if self.color != green:
-            robots.painterbot.paint(self)
         
         
-
+    
 
     pass
 
